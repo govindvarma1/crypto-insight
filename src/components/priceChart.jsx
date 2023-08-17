@@ -66,6 +66,14 @@ export default function PriceChart({ coin }) {
     }
   }
 
+  function BgColor() {
+    if (change > "0") {
+      return "rgba(195, 248, 188, 0.6)";
+    } else {
+      return "rgba(245, 73, 73, 0.5)";
+    }
+  }
+
   return (
     <div className="coin-details-section">
       <div className="chart-header">
@@ -110,10 +118,10 @@ export default function PriceChart({ coin }) {
                   label: `Price in USD`,
                   data: historicalData.map((coin) => coin.price),
                   borderColor: () => color(),
-                  backgroundColor: () => color(),
+                  backgroundColor: () => BgColor(),
                   borderWidth: 2,
-                  tension: 0.4
-                  // fill: true
+                  tension: 0.4,
+                  fill: true
                 }
               ]
             }}
