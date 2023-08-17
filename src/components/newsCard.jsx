@@ -4,9 +4,9 @@ export default function NewsCard(props) {
   const {
     name,
     url,
-    // image: {
-    //   thumbnail: { contentUrl }
-    // },
+    image: {
+      thumbnail: { contentUrl }
+    },
     description,
     datePublished,
     provider
@@ -15,10 +15,12 @@ export default function NewsCard(props) {
   return (
     <a href={url} style={{ color: "black" }}>
       <div className="news-card">
-        {/* <img src={contentUrl} alt="Image Not found" /> */}
-        <h4>{name}</h4>
-        <p className="indent">{description}</p>
-        <div>
+        <div className="header">
+          <h4>{name}</h4>
+          <img src={contentUrl} alt="Image Not found" />
+        </div>
+        <p className="indent">{description.substr(0, 250)}</p>
+        <div className="content">
           <p>{provider[0].name}</p>
           <p>{dateTimeAgo}</p>
         </div>
