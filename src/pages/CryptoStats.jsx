@@ -18,6 +18,7 @@ function RenderStats(props) {
   const { stats, coins } = props.data;
   return (
     <>
+      <h2 className="indent">Global Cryptocurrency Stats</h2>
       <div className="stats">
         {Object.entries(stats).map(([key, value]) => (
           <div className="stats-card" key={uuidv4()} id={key}>

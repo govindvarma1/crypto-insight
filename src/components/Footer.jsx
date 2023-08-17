@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <div className="footer">
-      <h3>CryptoInsignt</h3>
+      <h3>CryptoInsight</h3>
       <p>Copyright &copy; 2023 CryptoInsight, Inc.</p>
       <ul>
         <li>
