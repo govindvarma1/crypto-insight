@@ -36,7 +36,6 @@ export default function News() {
     try {
       const { data } = await axios.request(options);
       setNews(data.value);
-      console.log(data.value);
     } catch (err) {
       console.log(err);
     }

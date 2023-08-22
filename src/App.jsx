@@ -12,8 +12,8 @@ const News = lazy(() => import("./pages/news"));
 export default function App() {
   return (
     <>
-      <NavBar />
       <Suspense fallback={<></>}>
+        <NavBar />
         <div className="App">
           <Routes>
             <Route path="/" element={<CryptoStats />} />
@@ -22,8 +22,8 @@ export default function App() {
             <Route path="/news" element={<News />} />
           </Routes>
         </div>
+        <Footer />
       </Suspense>
-      <Footer />
     </>
   );
 }
