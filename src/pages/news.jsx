@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import articles from "../utils/articles";
 import Loading from "../components/Loding";
 import NewsCard from "../components/newsCard";
 
@@ -45,6 +44,6 @@ export default function News() {
   }, []);
 
   return (
-    <div>{articles !== null ? <RenderNews news={news} /> : <Loading />}</div>
+    <div>{news !== undefined ? <RenderNews news={news} /> : <Loading />}</div>
   );
 }
